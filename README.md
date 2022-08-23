@@ -2,7 +2,7 @@
 A bank system that works on the command line
 
 ## table of contents
-* [General info](#general-info)
+* [introduction](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
 
