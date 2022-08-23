@@ -15,5 +15,5 @@ the way banks work.
 python 3.10.4
 
 # screenshots
-![python](https://myoctocat.com/assets/images/base-octocat.svg)
+![python](images/working.png)
 ![running the program](https://myoctocat.com/assets/images/base-octocat.svg)
