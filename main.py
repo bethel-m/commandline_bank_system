@@ -1,11 +1,13 @@
 from bank_functions import Bank
+print("***********************")
+print("-----------------------")
+print("welcome")
+print("do you want to create an account or use your existing account")
 
 while 1:
-    print("***********************")
-    print("-----------------------")
-    print("welcome")
-    print("do you want to create an account or use your existing account")
-    print("1 to create account, 2 to use an existing account")
+    print("################################")
+    print("perform a transaction")
+    print("1 to create account, 2 to use an existing account , 3 to quit")
     answer = int(input("response: "))
     if answer == 1:
         banker = Bank()
@@ -20,3 +22,7 @@ while 1:
         else:
             print("not a valid user")
             print("check your surname and password and try again")
+    elif answer == 3:
+        exit()
+    else:
+        print("invalid response,please respond again")

@@ -1,4 +1,6 @@
+from ast import Num
 import random
+from re import I
 import maskpass
 from user_functions import User
 users = []
@@ -11,22 +13,36 @@ class Bank:
     def create_user(self):
         print("welcome, what is your name")
         surname = input("surname: ")
-        while (len(surname) <= 0):
+        while (len(surname) <= 0 ):
             print("please enter a valid name")
+            surname = input("surname: ")
         first_name = input("firstname: ")
         while (len(first_name) <= 0):
             print("please enter a valid name")
+            first_name = input("first_name: ")
 
-        print("create a password please-(use left ctrl on your keyboard to toggle visibility) ")
+        print("create a password please, must be greater than 4 characters-(use left ctrl on your keyboard to toggle visibility) ")
         password = maskpass.advpass()
+        while len(password) < 4:
+            print("please enter a valid password")
+            password = maskpass.advpass()
+        print("--password set")
         acc_no = self.generate_account_number()
-        print(f"your account number is: {acc_no}")
+        print(f"--your account number is: {acc_no}")
         # while acc_no in users:
         #    acc_no = self.generate_account_number()
         #    print(acc_no)
-
-        print("create a transaction pin (use left ctrl on your keyboard to toggle visibility)")
-        pin = maskpass.advpass(prompt="enter a pin :")
+        while True:
+            try:
+                print("create a transaction pin (use left ctrl on your keyboard to toggle visibility)")
+                pin = int(maskpass.advpass(prompt="enter a pin :"))
+                if len(str(pin)) == 4 :
+                    print("pin is set")
+                    break
+                print("please your pin should be 4 digits")
+            except:
+                print("please enter a valid pin, numbers only")
+        
         new_user = User(surname, first_name, acc_no, password, pin)
         users.append(new_user)
 
