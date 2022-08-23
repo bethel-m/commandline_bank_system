@@ -1,4 +1,4 @@
-
+import maskpass
 
 class User:
     def __init__(self, surname, first_name, account_number, password, pin, balance=0):
@@ -47,8 +47,8 @@ class User:
             print("your new balance is $" + str(self.balance))
 
     def confirm_transaction(self):
-        print("enter your transaction pin")
-        pin = int(input("pin: "))
+        print("(use left ctrl on your keyboard to toggle visibility)")
+        pin = maskpass.advpass(prompt="enter a pin :")
         if self.pin == pin:
             return True
         else:

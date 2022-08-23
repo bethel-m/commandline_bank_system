@@ -12,10 +12,9 @@ while 1:
         banker.create_user()
 
     elif answer == 2:
-        name = input("what is your surname: ")
-        password = input("enter your password: ")
+
         banker = Bank()
-        existing_user = banker.check_user_in(name, password)
+        existing_user = banker.check_user_in()
         if existing_user:
             banker.make_transaction(existing_user)
         else:
