@@ -1,16 +1,17 @@
 # commandline_bank_system
 A bank system that works on the command line
 
+
 ## table of contents
 * [introduction](#introduction)
 * [Technologies](#technologies)
 * [screenshots](#screenshots)
-* [features](#features)
-* [status](#status)
+
+
 
 ## introduction
-this project was built to understand the way banks work and make a simple demo to represents 
-the way banks work.
+this project was built to illustrate the working of a simple bank system
+it is very minimal in pure python with very few libraries
 
 ## Technologies
 this project was built with:
