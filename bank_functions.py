@@ -1,6 +1,4 @@
-from ast import Num
 import random
-from re import I
 import maskpass
 from user_functions import User
 users = []
