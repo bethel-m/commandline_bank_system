@@ -63,6 +63,7 @@ class Bank:
 
     # generates a 10 digit random number
     def generate_account_number(self):
+        print("generating account number .....")
         start_index = 1000000000
         end_index = 9999999999
         number = random.randint(start_index, end_index)
